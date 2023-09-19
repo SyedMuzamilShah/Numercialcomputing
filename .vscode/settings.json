@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "JavaScrift": "html",
+        "cmath": "cpp",
+        "string_view": "cpp",
+        "ostream": "cpp"
+    }
+}
