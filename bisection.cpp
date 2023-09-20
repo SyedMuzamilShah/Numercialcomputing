@@ -16,7 +16,7 @@ int main()
     cin >> Lower[i];
     cout << "Enter the Upper Bound : ";
     cin >> Upper[i];
-
+ 
     do
     {
         LowerFunc = FunctionDefined(Lower[i]);
