@@ -3,8 +3,8 @@ using namespace std;
 int main (){
     float UpperLimit, LowerLimite, HeightRange, Total, MidTotal;
     int NumberOfStep, NumberOfLoop = 0;
-    cout << "Enter UpperLimit   : "; cin >> UpperLimit;
     cout << "Enter LowerLimite  : "; cin >> LowerLimite;
+    cout << "Enter UpperLimit   : "; cin >> UpperLimit;
     cout << "Enter NumberOfStep : "; cin >> NumberOfStep;
 
     //W is find 

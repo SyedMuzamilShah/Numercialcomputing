@@ -10,8 +10,6 @@ int main()
     float Lower[14], Upper[14], MidValue[14];
     float LowerFunc, UpperFunc, MidValueFunc;
     int i = 0;
-    int Loo1;
-    int Loo2;
     cout << "Enter the Lower Bound : ";
     cin >> Lower[i];
     cout << "Enter the Upper Bound : ";
@@ -38,6 +36,8 @@ int main()
     } while (fabs(Lower[i] - Upper[i]) > 0.0001);
     cout << "Number Of Itreation : " << i << "\n";
     cout << "X Root Is : " << Lower[i] << " \nY Root Is : " << Upper[i];
+
+    
     return 0;
 }
 
