@@ -1,43 +1,31 @@
 #include <iostream>
-using namespace std;
 #include <math.h>
-float FunctionDefined(float x)
-{
-    return (x * x * x) - (10 * x) + 1;
-}
-int main()
-{
-    float Lower[14], Upper[14], MidValue[14];
-    float LowerFunc, UpperFunc, MidValueFunc;
-    int i = 0;
-    cout << "Enter the Lower Bound : ";
-    cin >> Lower[i];
-    cout << "Enter the Upper Bound : ";
-    cin >> Upper[i];
- 
+using namespace std;
+
+int main(){
+    float A[20], B[20], FB, FA, W, Fw;
+    int I = 0;
+    cout << "Enter Lower Bound : "; cin >> A[I];
+    cout << "Enter Upper Bound : "; cin >> B[I];
     do
     {
-        LowerFunc = FunctionDefined(Lower[i]);
-        UpperFunc = FunctionDefined(Upper[i]);
+        FA = (A[I] * A[I] * A[I] - 10 * A[I] + 1);
+        FB = (B[I] * B[I] * B[I] - 10 * B[I] + 1);
+        W = (A[I] + B[I])/2;
+        Fw = (W * W * W - 10 * W + 1);
 
-        MidValue[i] = (Lower[i] + Upper[i])/2;
-        MidValueFunc = FunctionDefined(MidValue[i]);
-        if (LowerFunc * MidValueFunc < 0)
-        {
-            Lower[i+1] = Lower[i];
-            Upper[i+1] = MidValue[i];
+        cout << I+1 <<")\tFunc A : " << FA << "\t\tFunc B : " << FB << "\t\tFunc W : " << Fw << endl; 
+        if (FA * Fw < 0){
+            A[I+1] = A[I];
+            B[I+1] = W;
+        }else{
+            A[I+1] = W;
+            B[I+1] = B[I];
         }
-        else
-        {
-            Lower[i+1] = MidValue[i];
-            Upper[i+1] = Upper[i];
-        }
-        i++;
-    } while (fabs(Lower[i] - Upper[i]) > 0.0001);
-    cout << "Number Of Itreation : " << i << "\n";
-    cout << "X Root Is : " << Lower[i] << " \nY Root Is : " << Upper[i];
+    I++;
+    } while (fabs(A[I] - B[I]) > 0.0001);
 
+    cout << "Absolut Value Of A : " << A[I] << endl;
+    cout << "Absolut Value Of B : " << B[I] << endl;
     
-    return 0;
 }
-
