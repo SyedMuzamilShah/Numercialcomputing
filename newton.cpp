@@ -27,8 +27,7 @@ int main(){
     float X[20];
     int I = 0;
     cout << "Enter Guass Values : "; cin >> X[I];
-
-        cout << "The Value OF X Is : " << X[I] << " At Index : " << I << endl;
+    cout << "The Value OF X Is : " << X[I] << " At Index : " << I << endl;
     do
     {
         float Fx = X[I] * X[I] * X[I] - 10 * X[I] + 1;
@@ -37,6 +36,6 @@ int main(){
         I++;
         cout << "The Value OF X Is : " << X[I] << " At Index : " << I << endl;
     } while (fabs(X[I] - X[I-1]) > 0.0001);
-    cout << "Final Absolute Value IS : " << X[I];
+    cout << "Final Absolute Value IS : " << X[I] << " At Index : " << I << endl;
     return 0;
 }
