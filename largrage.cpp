@@ -2,28 +2,26 @@
 using namespace std;
 int main()
 {
-    float x[10], fx[10], xp, l, r = 0;
-    int i, j, n;
-    cout << "enter value of N";
-    cin >> n;
-    for (i = 0; i < n; i++)
+    float X[10], FX[10], XP, L, R = 0;
+    int I, J, N;
+    cout << "Enter Number Of N : ";
+    cin >> N;
+    for (I = 0; I < N; I++)
     {
-        cout << "enter value of x";
-        cin >> x[i];
-        cout << "enter value of FX";
-        cin >> fx[i];
+        cout << "Enter Value Of X  : ";  cin >> X[I];
+        cout << "Enter Value Of Fx : ";  cin >> FX[I];
     }
 
-    cout << "enter value of x where you want to find Fx" << endl;
-    for (i = 0; i < n; i++)
+    cout << "Enter Value Which You Want To Predict : "; cin >> XP;
+    for (I = 0; I < N; I++)
     {
-        l = 1;
-        for (j = 0; j < n; j++)
-            if (i != j)
-                l *= (xp - x[j]) / (x[i] - x[j]);
-        r += fx[i] * l;
-        cout << "fx=" << r << "at x =" << xp;
-
+        L = 1;
+        for (J = 0; J < N; J++){
+            if (I != J){L *= (XP - X[J]) / (X[I] - X[J]);}
+        }
+        R += FX[I] * L;
     }
+        cout << "If x = " << XP << " Then " << "F(x) = " << R;
+
         return 0;
 }
