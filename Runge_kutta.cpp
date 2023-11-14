@@ -2,7 +2,7 @@
 using namespace std;
 
 float func(float x, float y){
-    return 2 * x + 3 * y;
+    return x +  y;
 }
 
 
@@ -11,9 +11,9 @@ int main()
     float X[20], Y[20], W;  // W is the length
     float K1, K2, K3, K4;
     int I = 0;
-    cout << "Enter The X1  : ";
+    cout << "Enter The X0  : ";
     cin >> X[I];
-    cout << "Enter The Y1  : ";
+    cout << "Enter The Y0  : ";
     cin >> Y[I];
     cout << "Enter The Len : ";
     cin >> W;
@@ -30,7 +30,7 @@ int main()
         X[I + 1] = X[I] + W;
         Y[I + 1] = (Y[I] + (0.1667) * (K1 + 2 * K2 + 2 * K3 + K4));
 
-        cout << "X[" << I << "]\t=\t" << X[I] << endl;
+        cout << "X[" << I << "]\t=\t" << X[I] << "\t";
         cout << "Y[" << I << "]\t=\t" << Y[I] << endl;
         I++;
     }

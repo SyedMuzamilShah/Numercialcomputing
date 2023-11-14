@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 int main (){
-    float UpperLimit, LowerLimite, HeightRange, Total, MidTotal;
+    float UpperLimit, LowerLimite, HeightRange, Total, MidTotal,MidTotal1;
     int NumberOfStep, NumberOfLoop = 0;
-    cout << "Enter LowerLimite  : "; cin >> LowerLimite;
     cout << "Enter UpperLimit   : "; cin >> UpperLimit;
+    cout << "Enter LowerLimite  : "; cin >> LowerLimite;
     cout << "Enter NumberOfStep : "; cin >> NumberOfStep;
 
     //W is find 
@@ -29,15 +29,21 @@ int main (){
     }
     
 
-    //Mid Value Add Which is F1+ F2 + ... + F(n-1)
-    for (int i = 1; i < NumberOfStep; i++)
+    //Odd
+    for (int i = 1; i < NumberOfStep; i+=2)
     {
         MidTotal += ValuesFunc[i];
+    }
+
+    // Even
+    for (int i = 2; i < NumberOfStep; i+=2)
+    {
+        MidTotal1 += ValuesFunc[i];
     }
     
 
     //Find The Last Answer
-    Total = (HeightRange/3) * (ValuesFunc[0] + ValuesFunc[NumberOfStep] + 2 * (MidTotal));
+    Total = (HeightRange/3) * (ValuesFunc[0] + ValuesFunc[NumberOfStep] + 2 * (MidTotal1) + 4 * (MidTotal));
 
 
     //Out Put Of Last Question
@@ -45,3 +51,6 @@ int main (){
 
     return 0;
 }
+
+// Odd  * 4
+// Even * 2

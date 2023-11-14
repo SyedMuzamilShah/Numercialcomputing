@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 int main (){
     float UpperLimit, LowerLimite, HeightRange, Total, MidTotal;
@@ -25,7 +26,8 @@ int main (){
     //Calculate The F(x) = 1/1+x^2
     for (int i = 0; i <= NumberOfStep; i++)
     {
-        ValuesFunc[i] = 1/(1 + (Values[i] * Values[i]));
+        // ValuesFunc[i] = 1/(1 + (Values[i] * Values[i]));
+        ValuesFunc[i] = 1/(1 + pow(Values[i],2));
     }
     
 
@@ -41,7 +43,7 @@ int main (){
 
 
     //Out Put Of Last Question
-    cout << "Total Is Equal To : " << Total;
+    cout << "Answer is : " << Total;
 
     return 0;
 }

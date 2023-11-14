@@ -1,7 +1,6 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-
 int main(){
     float A[20], B[20], FB, FA, W, Fw;
     int I = 0;
@@ -24,8 +23,7 @@ int main(){
         }
     I++;
     } while (fabs(A[I] - B[I]) > 0.0001);
-
     cout << "Absolut Value Of A : " << A[I] << endl;
-    cout << "Absolut Value Of B : " << B[I] << endl;
-    
+    cout << "Absolut Value Of B : " << B[I] << endl;  
+    return 0;
 }
