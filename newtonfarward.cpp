@@ -33,6 +33,14 @@ int main()
             X[I][J] = X[I + 1][J - 1] - X[I][J - 1];
         }
     }
+    for (I = 0; I < N; I++)
+    {
+        for (J = 0; J < M - I; J++)
+        {
+            cout << setw(5) << X[I][J];
+        }
+        cout << endl;
+    }
 
     // Technique Calculate
     cout << "Enter the value at which you want to interpolate (P): ";
