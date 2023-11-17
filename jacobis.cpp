@@ -20,9 +20,9 @@ int main(){
             );
     
     cout << "Num Loop : " << I <<endl;
-    cout << "X1 Root  : " << X1[I] <<endl;
-    cout << "X2 Root  : " << X2[I] <<endl;
-    cout << "X3 Root  : " << X3[I] <<endl;
-    cout << "X4 Root  : " << X4[I] <<endl;
+    cout << "X1  : " << X1[I] <<endl;
+    cout << "X2  : " << X2[I] <<endl;
+    cout << "X3  : " << X3[I] <<endl;
+    cout << "X4  : " << X4[I] <<endl;
     return 0;
 }
